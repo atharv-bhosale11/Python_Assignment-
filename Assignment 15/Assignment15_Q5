@@ -1,7 +1,6 @@
 from functools import reduce
 
-def maximum(a,b):
-    return a if a>b else b
+maximum = lambda a,b: a if a>b else b
 
 def main():
     Data = [12,45,67,3,8,96,45,11,98]
