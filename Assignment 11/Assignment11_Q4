@@ -9,7 +9,7 @@ def reverse(N):
 def main():
     N1 = int(input("Enter Number: "))
     Result = reverse(N1)
-    print("Sum of Digits are: ",Result)
+    print("Reverse of Digits are: ",Result)
 
 if __name__ == "__main__":
     main()
