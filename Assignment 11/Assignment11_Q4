@@ -1,0 +1,15 @@
+def reverse(N):
+    Ans = 0
+    while N>0:
+        digit = N%10
+        Ans = Ans*10+digit
+        N = N//10
+    return Ans
+
+def main():
+    N1 = int(input("Enter Number: "))
+    Result = reverse(N1)
+    print("Sum of Digits are: ",Result)
+
+if __name__ == "__main__":
+    main()
