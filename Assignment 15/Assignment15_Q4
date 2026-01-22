@@ -1,7 +1,6 @@
 from functools import reduce
 
-def add(a,b):
-    return a+b
+add = lambda a,b: a+b
 
 def main():
     Data = [12,45,67,3,8,96,45,11,98]
