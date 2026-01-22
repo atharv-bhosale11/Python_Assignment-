@@ -1,5 +1,4 @@
-def checkEven(a):
-    return a%2==0
+checkEven = lambda a: a%2==0
 
 def main():
     Data = [12,23,34,21,6,9,54,23,22,55]
