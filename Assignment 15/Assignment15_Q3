@@ -1,0 +1,13 @@
+def checkOdd(a):
+    return a%2!=0
+
+def main():
+    Data = [12,23,34,21,6,9,54,23,22,55]
+    print("Actual data is: ",Data)
+
+    FData=list(filter(checkOdd,Data))
+    print("Odd number data is: ",FData)
+
+
+if __name__=="__main__":
+    main()
