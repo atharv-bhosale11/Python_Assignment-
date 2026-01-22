@@ -1,0 +1,14 @@
+from functools import reduce
+
+def minimum(a,b):
+    return a if a<b else b
+
+def main():
+    Data = [12,45,67,3,8,96,45,11,98]
+    print("Actual Data is: ",Data)
+
+    RData = reduce(minimum,Data)
+    print("Minimum number is: ",RData)
+
+if __name__ == "__main__":
+    main()
