@@ -1,11 +1,9 @@
 
 def ChkNum(A):
-    if(A>0):
-        print("Positive Number")
-    elif(A<0):
-        print("Negative Number")
+    if(A%5==0):
+        print("Divisible by 5")
     else:
-        print("Zero")
+        print("Not Divisible by 5")
     return A
 
 def main():
