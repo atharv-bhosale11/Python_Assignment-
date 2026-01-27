@@ -20,11 +20,17 @@ class Circle:
         print("Circumference is: ",self.Circumference)
 
 obj1 = Circle() # creating object
+obj2 = Circle()
 
 obj1.Accept()
 obj1.CalculateArea()
 obj1.CalulateCircumference()
 obj1.Display()
+
+obj2.Accept()
+obj2.CalculateArea()
+obj2.CalulateCircumference()
+obj2.Display()
 
 
 
