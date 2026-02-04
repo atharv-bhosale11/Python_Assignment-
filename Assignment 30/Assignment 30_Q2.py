@@ -1,6 +1,6 @@
 import os
 
-def Lines(FileName):
+def Words(FileName):
     fobj = open(FileName,"r")
     
     Data = fobj.read()
@@ -12,6 +12,6 @@ def Lines(FileName):
 
 def main():
     FileName = input("Enter File Name: ")
-    Lines(FileName)
+    Words(FileName)
 if __name__=="__main__":
     main()
