@@ -6,6 +6,7 @@
 # Periodic Log Creation
 # Automatic Email Reporting
 
+
 import psutil
 import sys
 import os
@@ -14,10 +15,6 @@ import schedule
 import smtplib
 from email.message import EmailMessage
 
-
-# --------------------------------------------------
-# Process Scanning Function
-# --------------------------------------------------
 
 def ProcessScan():
 
@@ -84,16 +81,13 @@ def ProcessScan():
     return listprocess
 
 
-# --------------------------------------------------
-# Email Sending Function
-# --------------------------------------------------
 
 def SendEmail(LogFileName, ProcessData):
 
     try:
-        sender_email = "your_email@gmail.com"
-        sender_password = "your_app_password"
-        receiver_email = "receiver_email@gmail.com"
+        sender_email = "bhosaleat11@gmail.com"
+        sender_password = "egov tpzy nozv vawo"
+        receiver_email = "atharv.t.bhosale112@gmail.com"
 
         msg = EmailMessage()
         msg["Subject"] = "Platform Surveillance System Report"
@@ -165,9 +159,6 @@ Top 5 CPU Usage Processes:
         pass
 
 
-# --------------------------------------------------
-# Log Creation Function
-# --------------------------------------------------
 
 def CreateLog(FolderName):
 
@@ -228,10 +219,6 @@ def CreateLog(FolderName):
     except:
         pass
 
-
-# --------------------------------------------------
-# Main Function
-# --------------------------------------------------
 
 def main():
 
