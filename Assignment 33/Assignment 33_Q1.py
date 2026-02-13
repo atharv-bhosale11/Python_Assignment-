@@ -44,7 +44,7 @@ def ProcessScan():
             info["cpu_percent"] = proc.cpu_percent(interval=0.0)
             info["memory_percent"] = proc.memory_percent()
 
-            # 🔥 Thread Monitoring Feature
+            #  Thread Monitoring Feature
             info["thread_count"] = proc.num_threads()
 
             listprocess.append(info)
