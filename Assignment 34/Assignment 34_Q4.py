@@ -9,10 +9,6 @@ import smtplib
 from email.message import EmailMessage
 
 
-# ----------------------------------------------------
-# Logging Function
-# ----------------------------------------------------
-
 def write_log(message, log_file):
     try:
         with open(log_file, "a") as f:
@@ -20,10 +16,6 @@ def write_log(message, log_file):
     except Exception:
         pass
 
-
-# ----------------------------------------------------
-# Send Email
-# ----------------------------------------------------
 
 def send_email(log_file, zip_file):
     try:
@@ -69,10 +61,6 @@ def send_email(log_file, zip_file):
         pass
 
 
-# ----------------------------------------------------
-# Create ZIP
-# ----------------------------------------------------
-
 def make_zip(folder):
     timestamp = time.strftime("%Y-%m-%d_%H-%M-%S")
     zip_name = folder + "_" + timestamp + ".zip"
@@ -89,9 +77,6 @@ def make_zip(folder):
         return None
 
 
-# ----------------------------------------------------
-# Calculate Hash
-# ----------------------------------------------------
 
 def calculate_hash(path):
     hobj = hashlib.md5()
@@ -106,10 +91,6 @@ def calculate_hash(path):
     except Exception:
         return None
 
-
-# ----------------------------------------------------
-# Backup Files (with Exclude Support)
-# ----------------------------------------------------
 
 def BackupFiles(Source, Destination, ExcludedExt):
     Copied_Files = []
@@ -140,10 +121,6 @@ def BackupFiles(Source, Destination, ExcludedExt):
     return Copied_Files
 
 
-# ----------------------------------------------------
-# Restore Backup
-# ----------------------------------------------------
-
 def restore_backup(zip_file, destination):
     try:
         if not os.path.exists(zip_file):
@@ -161,9 +138,6 @@ def restore_backup(zip_file, destination):
         print("Error during restore.")
 
 
-# ----------------------------------------------------
-# Main Backup Logic
-# ----------------------------------------------------
 
 def marvellousDataShieldStart(Source="Data", ExcludedExt=None):
 
@@ -205,11 +179,6 @@ def marvellousDataShieldStart(Source="Data", ExcludedExt=None):
         write_log("Error: " + str(e), log_file)
 
     write_log(Border, log_file)
-
-
-# ----------------------------------------------------
-# Main Function
-# ----------------------------------------------------
 
 def main():
 
