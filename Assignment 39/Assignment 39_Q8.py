@@ -164,3 +164,5 @@ plt.show()
 
 #Conclusion :- Identifying the most effective model for predicting student performance and highlighting the key factors(Attendance,Previous Score,Assignment and Sleephours) 
 #On this Dataset I analyse the data over that I implement Decision tree Classifier Model ,find the accuracy, Confusion Matrix as well as makes Visualize Presentation.
+#Accuracy of this Model is 91.6666%
+
