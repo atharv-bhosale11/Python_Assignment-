@@ -162,4 +162,5 @@ disp.plot()
 plt.title("Confusion Matrix for Student Dataset")
 plt.show()
 
-#Conclusion :- identifying the most effective model for predicting student performance and highlighting the key factors influencing academic success to enable early intervention by educators
+#Conclusion :- Identifying the most effective model for predicting student performance and highlighting the key factors(Attendance,Previous Score,Assignment and Sleephours) 
+#On this Dataset I analyse the data over that I implement Decision tree Classifier Model ,find the accuracy, Confusion Matrix as well as makes Visualize Presentation.
