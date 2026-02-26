@@ -1,0 +1,75 @@
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
+
+DatasetPath = "student_performance_ml.csv"
+
+df = pd.read_csv(DatasetPath)
+print("Dataset loaded successfully!")
+
+# Feature Selection
+
+feature_cols = [
+    "StudyHours",
+    "Attendance",
+    "PreviousScore",
+    "AssignmentsCompleted",
+    "SleepHours"
+]
+
+X = df[feature_cols]          # Independent variables
+Y = df["FinalResult"]         # Target variable
+
+# Train-Test Split
+
+X_train, X_test, Y_train, Y_test = train_test_split(
+    X,
+    Y,
+    test_size=0.3,
+    random_state=42
+)
+
+print("Data Splitting Done!")
+
+print("X Shape:", X.shape)
+print("Y Shape:", Y.shape)
+
+# Model Creation
+
+model = DecisionTreeClassifier(
+    criterion="gini",
+    max_depth=3,
+    random_state=42
+)
+
+print("Model Successfully Created:", model)
+
+# Model Training
+
+model.fit(X_train, Y_train)
+print("Model Training Completed!")
+
+print("X_train:", X_train.shape)
+print("X_test:", X_test.shape)
+print("Y_train:", Y_train.shape)
+print("Y_test:", Y_test.shape)
+
+# Prediction
+
+y_pred = model.predict(X_test)
+print("\nPredicted Values:", y_pred)
+correct = 0
+
+for i in range(len(Y_test)):
+    if Y_test.iloc[i] == y_pred[i]:
+        correct += 1
+
+total = len(Y_test)
+manual_accuracy = correct / total
+
+print("Manual Accuracy:", manual_accuracy)
+
