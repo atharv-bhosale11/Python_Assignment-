@@ -87,3 +87,4 @@ def main():
 
 if __name__ =="__main__":
     main()
+#prediction changes when K increases Because more neighbors participate in voting.
