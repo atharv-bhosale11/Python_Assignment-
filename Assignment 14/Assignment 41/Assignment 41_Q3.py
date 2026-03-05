@@ -1,7 +1,6 @@
 # Study Hours [2,5,6,1]
 # Attendance  [60,80,85,50]
 # Result      [F,P,P,F]
-
 # Predict(4,70)
 
 import math
