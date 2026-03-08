@@ -1,1 +1,2 @@
-
+Data Shield System is a Python-based automation tool designed to securely back up important files from a source directory to a backup location at regular time intervals. The system intelligently copies only new or modified files, which improves efficiency and saves storage space.
+The project also creates a compressed ZIP archive of the backup, making it easy to store, transfer, and restore data if required.
