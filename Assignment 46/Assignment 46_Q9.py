@@ -15,7 +15,7 @@ def Exam():
     Y = np.array(Marks)
 
     print("Values of Independent Variables: X - ",X)
-    print("Values of Independent Variables: Y - ",Y)
+    print("Values of Dependent Variables: Y - ",Y)
 
     model = LinearRegression()
     model.fit(X,Y)
