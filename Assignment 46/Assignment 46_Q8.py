@@ -10,7 +10,7 @@ def Exam():
 
     print(Border)
     print("Values of Independent Variables: X - ",StudyHours)
-    print("Values of Independent Variables: Y - ",Marks)
+    print("Values of Dependent Variables: Y - ",Marks)
 
     model = LinearRegression()
     model.fit(StudyHours,Marks)
