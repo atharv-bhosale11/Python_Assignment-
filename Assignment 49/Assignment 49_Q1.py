@@ -134,10 +134,17 @@ plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.show()
 
+#--------------------------------------------------------
+# Step 6: Final Output
+#--------------------------------------------------------
+
+print(Border)
+print("Step 6: Final Output")
+print(Border)
+
 print("Predictions:")
 print(Y_pred)
 
-# Convert to DataFrame
 results = pd.DataFrame({
     "Actual": Y_test.values,
     "Predicted": Y_pred
@@ -146,7 +153,6 @@ results = pd.DataFrame({
 print("\nResults:")
 print(results.head())
 
-# Save to file
 results.to_csv("diabetes_predictions.csv", index=False)
 
 print("\nPredictions saved to diabetes_predictions.csv")
