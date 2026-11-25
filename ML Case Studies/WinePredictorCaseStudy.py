@@ -217,17 +217,3 @@ def MarvellousClassifier(Datapath):
     EvaluateModel(Y_test,Y_pred)
 
 
-#######################################################################
-# Function Name : main
-# Description   : Entry point of the program
-#######################################################################
-
-def main():
-
-    print("Wine Classifier using KNN")
-
-    MarvellousClassifier("WinePredictor.csv")
-
-
-if __name__ == "__main__":
-    main()
